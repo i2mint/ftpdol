@@ -10,7 +10,7 @@ A basic ftp persister.
 Keys must be names of files.
 
 ```python
->>> from py2store.persisters.ftp_persister import FtpPersister
+>>> from ftpdol.ftp_persister import FtpPersister
 >>> s = FtpPersister()
 >>> k = 'foo'
 >>> v = 'bar'
