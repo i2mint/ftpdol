@@ -80,13 +80,13 @@ class FtpPersister(Persister):
 
     def __getitem__(self, k):
         bio = BytesIO()
-        self._ftp.retrbinary("RETR {}".format(k), bio.write)
+        self._ftp.retrbinary(f"RETR {k}", bio.write)
         bio.seek(0)
         return bio.read().decode(self._encoding)
 
     def __setitem__(self, k, v):
         bio = BytesIO(bytearray(v, encoding=self._encoding))
-        self._ftp.storbinary("STOR {}".format(k), bio)
+        self._ftp.storbinary(f"STOR {k}", bio)
 
     def __delitem__(self, k):
         if len(k) > 0:
