@@ -65,12 +65,12 @@ class FtpPersister(Persister):
     """
 
     def __init__(
-            self,
-            user="dlpuser@dlptest.com",
-            password="fLDScD4Ynth0p4OJ6bW6qCxjh",
-            url="ftp.dlptest.com",
-            rootdir="./py2store",
-            encoding="utf8",
+        self,
+        user="dlpuser@dlptest.com",
+        password="fLDScD4Ynth0p4OJ6bW6qCxjh",
+        url="ftp.dlptest.com",
+        rootdir="./py2store",
+        encoding="utf8",
     ):
         self._ftp = FTP(host=url, user=user, passwd=password)
         self._rootdir = rootdir
